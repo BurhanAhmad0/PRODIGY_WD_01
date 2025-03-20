@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins-Regular"),
+        url('./assets/fonts/Poppins/Poppins-Regular.ttf')
+}
+
+:root {
+
+    --logo-glow-color: #00a63e;
+    --nav-link-underline: #00a63e;
+
+    --CTA-btn-bg: #00a63e;
+    --CTA-btn-ring: #22c55e80;
+}
+
+@layer components {
+
+    .nav-link-underline-animation {
+        display: inline-block;
+        position: relative;
+    }
+
+    .nav-link-underline-animation::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--nav-link-underline);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .nav-link-underline-animation:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .CTA-btn {
+        position: relative;
+        padding-left: 2rem;
+        /* px-8 */
+        padding-right: 2rem;
+        /* px-8 */
+        padding-top: 0.5rem;
+        /* py-2 */
+        padding-bottom: 0.5rem;
+        /* py-2 */
+        font-weight: 600;
+        /* font-semibold */
+        background-color: var(--CTA-btn-bg);
+        /* bg-green-600 */
+        color: black;
+        /* text-white */
+        display: inline-flex;
+        /* inline-flex */
+        justify-content: center;
+        /* justify-center */
+        cursor: pointer;
+        /* cursor-pointer */
+        border-radius: 0.125rem;
+        /* rounded-sm */
+        transition: all 0.3s;
+        /* transition-all */
+        white-space: nowrap;
+        /* whitespace-nowrap */
+        background-image: linear-gradient(to right, var(--CTA-btn-ring), var(--CTA-btn-bg));
+        /* bg-gradient-to-r from-green-800 to-green-700 */
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        /* shadow */
+    }
+
+    .CTA-btn:hover {
+        background-color: var(--CTA-btn-bg);
+        /* hover:bg-green-400 */
+    }
+
+    .CTA-btn:focus,
+    .CTA-btn:focus-visible {
+        outline: none;
+        /* focus:outline-none */
+        ring-color: var(--CTA-btn-ring);
+        /* focus:ring focus:ring-green-500/50 */
+    }
+
+    .CTA-btn::after {
+        content: "";
+        position: absolute;
+        /* relative before:absolute */
+        inset: 0;
+        /* before:inset-0 */
+        border-radius: inherit;
+        /* before:rounded-[inherit] */
+        background-image: linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.5) 50%, transparent 75%, transparent 100%);
+        /* before:bg-[linear-gradient(45deg,... */
+        background-size: 250% 250%, 100% 100%;
+        /* before:bg-[length:250%_250%,100%_100%] */
+        background-position: 200% 0, 0 0;
+        /* before:bg-[position:200%_0,0_0] */
+        background-repeat: no-repeat;
+        /* before:bg-no-repeat */
+        transition: background-position 0s ease;
+        /* before:[transition:background-position_0s_ease] */
+    }
+
+    .CTA-btn:hover::after {
+        background-position: -100% 0, 0 0;
+        /* hover:before:bg-[position:-100%_0,0_0] */
+        transition-duration: 1500ms;
+        /* hover:before:duration-[1500ms] */
+    }
+
+}
+
+@theme {
+
+    /* Custom Font */
+    --font-poppins: Poppins;
+
+    /* Custom Responsive Breakpoints */
+    --breakpoint-xsm: 382px;
+    --breakpoint-mlg: 944px;
+
+    /* Custom Colors */
+    --color-body-bg: #1c1c1c;
+
+    /* Custom Heights */
+    --spacing-hero-height: 550px;
+    --spacing-service-card: 250px;
+
+    /* Custom Widths */
+    --spacing-smd: 390px;
+}

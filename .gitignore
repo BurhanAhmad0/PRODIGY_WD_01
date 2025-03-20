@@ -1,0 +1,75 @@
+# React build directory
+build/
+node_modules/
+
+# Logs
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Optional Yarn cache directory
+.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Yarn integrity file
+.yarn-integrity
+
+# Coverage directory used by testing tools like Jest
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Local environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Docker related files
+docker-compose.override.yml
+.dockerignore
+
+# MacOS specific
+.DS_Store
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Git related files
+.git/
+
+# Windows specific
+Thumbs.db
+
+# ESLint cache
+.eslintcache
+
+# Parcel-bundler cache (if using)
+.cache/
+
+# Webpack cache
+.cache/
+
+# Service worker file
+service-worker.js
+
+# CI/CD specific files
+*.env.production
+
+# Docker related files
+docker-compose.yml
+Dockerfile
