@@ -16,7 +16,7 @@ Before you begin, ensure you have met the following requirements:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/git@github.com:BurhanAhmad0/PRODIGY_WD_01.git
+git clone git@github.com:BurhanAhmad0/PRODIGY_WD_01.git
 ```
 
 ### 2. Install Dependencies
