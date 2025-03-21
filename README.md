@@ -16,13 +16,13 @@ Before you begin, ensure you have met the following requirements:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/your-repo.git
+git clone https://github.com/yourusername/git@github.com:BurhanAhmad0/PRODIGY_WD_01.git
 ```
 
 ### 2. Install Dependencies
 Navigate to the project directory and install dependencies using Yarn:
 ```bash
-cd your-repo
+cd PRODIGY_WD_01
 yarn install
 ```
 
@@ -37,7 +37,7 @@ yarn start
 ## Usage
 Once the app is running, open your browser and go to:
 ```
-http://localhost:3000
+http://localhost:5173
 ```
 
 ## Deployment
